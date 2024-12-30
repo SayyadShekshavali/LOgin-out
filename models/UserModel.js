@@ -1,4 +1,6 @@
-import { verify } from "jsonwebtoken";
+import pkg from "jsonwebtoken";
+const { verify } = pkg;
+
 import { mongoose } from "mongoose";
 import mongodb from "mongoose";
 
@@ -39,4 +41,4 @@ const userSchema = new mongoose.Schema({
 });
 const User = mongoose.models.user || mongoose.model("User", userSchema);
 
-module.exports = User;
+export default User;
